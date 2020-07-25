@@ -1,27 +1,62 @@
 svg {
-    width: 20vw; 
-    height: 20vw;
-    fill: rgba(29,161,242,1.00);
-    margin: 20px; 
-    transition: 0.5s;
+  width: 600px;
+  height: 600px;
+  fill: #1da1f2;
+  margin: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#twitterBird {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+#circleBorder {
+  stroke: #1da1f2;
+  stroke-width: 1px;
+  fill: none;
+}
+
+.cloud {
+  opacity: 0;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+}
+
+.riseWithBird:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-10px) rotate(-20deg);
+          transform: translateY(-10px) rotate(-20deg);
+}
+
+.riseWithBird:hover .cloud {
+  -webkit-animation: cloudAnimation;
+          animation: cloudAnimation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cloudAnimation {
+  0% {
+    opacity: 0;
   }
-  #twitterBird {
-      transform: scale(0.7);
-      transform-origin: 50% 50%;
+  100% {
+    opacity: 1;
   }
-  
-  #circleBorder {
-          stroke: rgba(29,161,242,1.00); 
-          stroke-width: 1px; 
-          fill: none; 
+}
+
+@keyframes cloudAnimation {
+  0% {
+    opacity: 0;
   }
-  
-  
-  svg:hover {
-    transition: 0.5s;
-    transform: translateY(-10px) rotate(-20deg); 
+  100% {
+    opacity: 1;
   }
-  
-  svg:hover > #circleBorder {
-      stroke: rgba(99,161,242,1.00); 
-  }
+}
+/*# sourceMappingURL=style.css.map */
