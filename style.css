@@ -20,20 +20,14 @@ svg {
   fill: none;
 }
 
-.cloud {
-  opacity: 0;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
-}
-
-.riseWithBird:hover {
+#icon:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: translateY(-10px) rotate(-20deg);
-          transform: translateY(-10px) rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
-.riseWithBird:hover .cloud {
+#icon:hover .cloud {
   -webkit-animation: cloudAnimation;
           animation: cloudAnimation;
   -webkit-animation-duration: 0.5s;

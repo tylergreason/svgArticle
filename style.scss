@@ -16,18 +16,13 @@ stroke-width: 1px;
 fill: none; 
 }
 
-.cloud {
-    opacity: 0; 
-    transform: translateY(-30%);
-}
-.riseWithBird:hover {
+#icon:hover {
     transition: 0.5s;
-    transform: translateY(-10px) rotate(-20deg); 
+    transform: rotate(-20deg); 
     .cloud {
         animation: cloudAnimation; 
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
-        // transform: unset;
     }
     @keyframes cloudAnimation {
         0% {
