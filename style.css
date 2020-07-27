@@ -2,16 +2,21 @@ body {
   background-color: #c8ffc8;
 }
 
-.cloud {
+.clouds {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.clouds .cloud {
   opacity: 0;
   fill: white;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
 }
 
 svg {
-  width: 600px;
-  height: 600px;
+  width: 100px;
+  height: 100px;
   fill: #1da1f2;
   margin: 20px;
   -webkit-transition: 0.5s;
@@ -31,38 +36,42 @@ svg {
   fill: none;
 }
 
-#icon #twitterBird {
+#icon:hover #twitterBird {
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation: birdAnimation;
           animation: birdAnimation;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 
-#icon .cloud {
+#icon:hover .cloud {
   -webkit-animation: cloudAnimation;
           animation: cloudAnimation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes birdAnimation {
   0% {
-    -webkit-transform: rotate(-10deg) translateY(-20%) scale(0.7);
-            transform: rotate(-10deg) translateY(-20%) scale(0.7);
+    -webkit-transform: rotate(0deg) translateY(0%) scale(0.7);
+            transform: rotate(0deg) translateY(0%) scale(0.7);
   }
-  20% {
-    -webkit-transform: rotate(-50deg) translateY(10%) scale(0.7);
-            transform: rotate(-50deg) translateY(10%) scale(0.7);
+  10% {
+    -webkit-transform: rotate(-30deg) translateY(15%) scale(0.7);
+            transform: rotate(-30deg) translateY(15%) scale(0.7);
   }
   50% {
-    -webkit-transform: rotate(-20deg) translateY(20%) scale(0.7);
-            transform: rotate(-20deg) translateY(20%) scale(0.7);
+    -webkit-transform: rotate(-20deg) translateY(-5%) scale(0.7);
+            transform: rotate(-20deg) translateY(-5%) scale(0.7);
+  }
+  70% {
+    -webkit-transform: rotate(10deg) translateY(10%) scale(0.7);
+            transform: rotate(10deg) translateY(10%) scale(0.7);
   }
   100% {
     -webkit-transform: rotate(0deg) translateY(0%) scale(0.7);
@@ -72,16 +81,20 @@ svg {
 
 @keyframes birdAnimation {
   0% {
-    -webkit-transform: rotate(-10deg) translateY(-20%) scale(0.7);
-            transform: rotate(-10deg) translateY(-20%) scale(0.7);
+    -webkit-transform: rotate(0deg) translateY(0%) scale(0.7);
+            transform: rotate(0deg) translateY(0%) scale(0.7);
   }
-  20% {
-    -webkit-transform: rotate(-50deg) translateY(10%) scale(0.7);
-            transform: rotate(-50deg) translateY(10%) scale(0.7);
+  10% {
+    -webkit-transform: rotate(-30deg) translateY(15%) scale(0.7);
+            transform: rotate(-30deg) translateY(15%) scale(0.7);
   }
   50% {
-    -webkit-transform: rotate(-20deg) translateY(20%) scale(0.7);
-            transform: rotate(-20deg) translateY(20%) scale(0.7);
+    -webkit-transform: rotate(-20deg) translateY(-5%) scale(0.7);
+            transform: rotate(-20deg) translateY(-5%) scale(0.7);
+  }
+  70% {
+    -webkit-transform: rotate(10deg) translateY(10%) scale(0.7);
+            transform: rotate(10deg) translateY(10%) scale(0.7);
   }
   100% {
     -webkit-transform: rotate(0deg) translateY(0%) scale(0.7);
@@ -92,11 +105,16 @@ svg {
 @-webkit-keyframes cloudAnimation {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+  70% {
+    opacity: 0.9;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.95;
     -webkit-transform: translateY(20%);
             transform: translateY(20%);
   }
@@ -105,11 +123,16 @@ svg {
 @keyframes cloudAnimation {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+  70% {
+    opacity: 0.9;
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.95;
     -webkit-transform: translateY(20%);
             transform: translateY(20%);
   }

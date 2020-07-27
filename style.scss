@@ -2,15 +2,18 @@ body {
     background-color: rgb(200,255,200);
 }
 
-.cloud {
-    opacity: 0;
-    fill: white;
-    transform: scale(0.7);
+.clouds {
+    transform-origin: center;
+    transform: scale(0.85);
+    .cloud {
+        opacity: 0;
+        fill: white;
+    }
 }
 
 svg {
-    width: 600px; 
-    height: 600px;
+    width: 100px; 
+    height: 100px;
     fill: rgba(29,161,242,1.00);
     margin: 20px; 
     transition: 0.5s;
@@ -27,18 +30,18 @@ stroke-width: 1px;
 fill: none; 
 }
 
-#icon {
+#icon:hover {
     #twitterBird {
         // transition: 0.5s;
         transform-origin: center;
         animation: birdAnimation; 
         animation-fill-mode: forwards;
-        animation-duration: 1s;
+        animation-duration: 1.2s;
     }
 
     .cloud {
         animation: cloudAnimation; 
-        animation-duration: 1s;
+        animation-duration: 1.2s;
         animation-fill-mode: forwards;
     }
 
@@ -46,13 +49,16 @@ fill: none;
 
 @keyframes birdAnimation {
     0% {
-        transform: rotate(-10deg) translateY(-20%) scale(0.7);
+        transform: rotate(0deg) translateY(0%) scale(0.7);
     }
-    20% {
-        transform: rotate(-50deg) translateY(10%) scale(0.7);
+    10% {
+        transform: rotate(-30deg) translateY(15%) scale(0.7);
     }
     50%{
-        transform: rotate(-20deg) translateY(20%) scale(0.7);
+        transform: rotate(-20deg) translateY(-5%) scale(0.7);
+    }
+    70%{
+        transform: rotate(10deg) translateY(10%) scale(0.7);
     }
     100% {
         transform: rotate(0deg) translateY(0%) scale(0.7);
@@ -62,10 +68,14 @@ fill: none;
 @keyframes cloudAnimation {
     0% {
         opacity: 0;
-        transform: translateY(-20%);
+        transform: translateY(-40%);
+    }
+    70% {
+        opacity: 0.9;
+        transform: translateY(30%)
     }
     100% {
-        opacity: 0.9;
+        opacity: 0.95;
         transform: translateY(20%);
     }
 }
