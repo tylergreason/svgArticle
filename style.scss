@@ -1,3 +1,7 @@
+.cloud {
+    opacity: 0;
+}
+
 svg {
     width: 600px; 
     height: 600px;
@@ -17,8 +21,10 @@ fill: none;
 }
 
 #icon:hover {
-    transition: 0.5s;
-    transform: rotate(-20deg); 
+    .riseWithBird {
+        transition: 0.5s;
+        transform: rotate(-20deg); 
+    }
     .cloud {
         animation: cloudAnimation; 
         animation-duration: 0.5s;
