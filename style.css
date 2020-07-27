@@ -1,5 +1,12 @@
+body {
+  background-color: #c8ffc8;
+}
+
 .cloud {
   opacity: 0;
+  fill: white;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 svg {
@@ -24,37 +31,87 @@ svg {
   fill: none;
 }
 
-#icon:hover .riseWithBird {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-}
-
-#icon:hover .cloud {
-  -webkit-animation: cloudAnimation;
-          animation: cloudAnimation;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+#icon #twitterBird {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: birdAnimation;
+          animation: birdAnimation;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#icon .cloud {
+  -webkit-animation: cloudAnimation;
+          animation: cloudAnimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes birdAnimation {
+  0% {
+    -webkit-transform: rotate(-10deg) translateY(-20%) scale(0.7);
+            transform: rotate(-10deg) translateY(-20%) scale(0.7);
+  }
+  20% {
+    -webkit-transform: rotate(-50deg) translateY(10%) scale(0.7);
+            transform: rotate(-50deg) translateY(10%) scale(0.7);
+  }
+  50% {
+    -webkit-transform: rotate(-20deg) translateY(20%) scale(0.7);
+            transform: rotate(-20deg) translateY(20%) scale(0.7);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0%) scale(0.7);
+            transform: rotate(0deg) translateY(0%) scale(0.7);
+  }
+}
+
+@keyframes birdAnimation {
+  0% {
+    -webkit-transform: rotate(-10deg) translateY(-20%) scale(0.7);
+            transform: rotate(-10deg) translateY(-20%) scale(0.7);
+  }
+  20% {
+    -webkit-transform: rotate(-50deg) translateY(10%) scale(0.7);
+            transform: rotate(-50deg) translateY(10%) scale(0.7);
+  }
+  50% {
+    -webkit-transform: rotate(-20deg) translateY(20%) scale(0.7);
+            transform: rotate(-20deg) translateY(20%) scale(0.7);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0%) scale(0.7);
+            transform: rotate(0deg) translateY(0%) scale(0.7);
+  }
 }
 
 @-webkit-keyframes cloudAnimation {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
   }
 }
 
 @keyframes cloudAnimation {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
   }
 }
 /*# sourceMappingURL=style.css.map */
